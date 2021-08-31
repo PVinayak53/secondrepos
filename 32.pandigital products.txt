@@ -1,0 +1,16 @@
+#32 pandigital products
+
+res=set()
+tbc=set('123456789')
+#flag=
+for i in range(1,10):
+    for j in range(99,10000):
+        s=str(i)+str(j)+str(i*j)
+        if (len(s)==9 and set(s)==tbc):
+            res.add(i*j)
+for i in range(11,100):
+    for j in range(99,1000):
+        s=str(i)+str(j)+str(i*j)
+        if(len(s)==9 and set(s)==tbc):
+            res.add(i*j)
+print(sum(res))

@@ -1,0 +1,41 @@
+# 37 Truncable primes
+def prime(n):
+    if n==0:
+        return False
+    if n==1:
+        return False
+    
+    for j in range(2,n//2+1):
+        if n%j==0:
+            break
+    else:
+        return True
+ms=0
+for i in range(10,800000):
+   # l.append(i)
+    l=[]
+    ct=0
+    m=i
+    n=i
+    while(m!=0):
+
+        rem=m//10
+        l.append(rem)
+        m=m//10
+   
+    
+    z=str(i)
+    for j in range(0,len(z)):
+        l.append(int(z[j:]))
+    
+    
+   
+    x=len(l)
+   
+    for i in l:
+        if (prime(i)==True):
+            ct+=1
+    if ct==x-1:
+        print(n)
+        ms+=n
+print('the main result is ',ms)

@@ -1,0 +1,17 @@
+#solution 4 : Largest palindrome Product
+
+l=[]
+for i in range(999,100,-1):
+    for j in range(999,100,-1):
+        x=i*j
+        y=x
+        rev=0
+        while(x>0):
+            rem=x%10
+            rev=rev*10+rem
+            x//=10
+        if y==rev:
+           # print(i*j)
+            l.append(i*j)
+            break
+print(max(l))

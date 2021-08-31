@@ -1,0 +1,8 @@
+#9.speical pythogorial triplet
+
+for i in range(1,400):
+    for j in range(1,400):
+        c=(1000-i)-j
+        if i<j<c:
+            if ((i*i)+(j*j))==c*c:
+                print(i*j*c)

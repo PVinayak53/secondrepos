@@ -1,0 +1,22 @@
+#34 digit factorial
+
+def fac(n):
+    fact=1
+    for i in range(1,n+1):
+        fact*=i
+    return fact
+su=0
+ms=0
+for i in range(3,100000):
+    y=i
+    x=0
+    while(i!=0):
+        rem=i%10
+        x+=fac(rem)
+        i=i//10
+    if x==y:
+        su+=1
+        ms+=y
+print(su)
+print(ms)
+        

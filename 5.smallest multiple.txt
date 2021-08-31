@@ -1,0 +1,10 @@
+# solution 5 smallest multiple
+
+for i in range(232792555,232792566):
+    count=0
+    for j in range(2,21):
+        if i%j==0:
+            count+=1
+    if count==19:
+        print(i)
+        break

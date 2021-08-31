@@ -1,0 +1,8 @@
+#24 permutations
+
+l=[]
+from itertools import permutations
+l = list(permutations(range(0,10)))
+#print(l)
+print ([l[100000]])
+        

@@ -1,0 +1,20 @@
+#30. fifth digit power
+
+ct=0
+msum=0
+for i in range(2,35000):
+    x=i
+    su=0
+    while(i!=0):
+        rem=i%10
+        su+=(rem**5)
+        i=i//10
+    if (su==x):
+        print(x)
+        ct+=1
+        msum+=x
+print("fifth power count is:",ct)
+print("fifth power sum is:",msum)
+        
+        
+        

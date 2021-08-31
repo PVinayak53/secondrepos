@@ -1,0 +1,16 @@
+# 25 solution : 1000th fibonacii number
+
+x=10
+a=1
+b=1
+cnt=0
+
+while(True):
+   
+    cnt+=1
+    nt=[int(digit) for digit in str(a)]
+    if len(nt)==1000:
+        print(cnt)
+        break
+    
+    a,b=b,a+b

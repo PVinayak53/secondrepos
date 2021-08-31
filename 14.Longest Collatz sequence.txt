@@ -1,0 +1,18 @@
+# solution 14: longest collatz sequence
+
+l=[]
+for i in range(10,100000):
+    x=1
+    while(i>1):
+    
+        if i%2==0:
+            i/=2
+            x+=1
+        else:
+            i=i*3+1
+            x+=1
+    l.append(x)
+z=max(l)
+for i,j in enumerate(l,10):
+    if j==z:
+        print(i)

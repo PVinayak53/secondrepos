@@ -1,0 +1,26 @@
+#21 amicable numbers
+
+def fn(n):
+    s=0
+    for i in range(1,n//2+1):
+        if n%i==0:
+            s+=i
+    return s
+ct=0
+amicable=0
+for i in range(200,10000):
+    su=0
+    for j in range(1,i//2+1):
+        if i%j==0:
+            su+=j
+    #print(i,su,sep=":",end=' ')
+    if i==su:
+        ct-=1
+        amicable-=i
+    if (fn(su)==i):
+        ct+=1
+        amicable+=i
+        print(i)
+
+print(ct)
+print(amicable)

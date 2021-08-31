@@ -1,0 +1,5 @@
+# solution 16 : Power digit sum
+
+x=2**1000
+nt=[int(i) for i in str(x)]
+print(sum(nt))
